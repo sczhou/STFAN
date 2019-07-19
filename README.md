@@ -3,7 +3,7 @@
 Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblurring".&nbsp; [[arXiv]](https://arxiv.org/pdf/1904.05065.pdf) &nbsp; [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)&nbsp;
 
 <p align="center">
-  <img width=95% src="https://user-images.githubusercontent.com/14334509/61510736-c3aec200-aa26-11e9-8f7f-33d4ed466190.jpg">
+  <img width=95% src="https://user-images.githubusercontent.com/14334509/61511077-1b016200-aa28-11e9-94c1-63e97f55f093.png">
 </p>
 
 
@@ -62,11 +62,9 @@ You can also use the following simple command, with changing the settings in con
 python runner.py
 ```
 
-## Results on the testing dataset
+## Results on the testing dataset and real blurry videos
 
-<p align="center">
-  <img width=100% src="#">
-</p>
+Some results are shown in [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)
 
 ## Citation
 If you find STFANet, or FAC layer useful in your research, please consider citing:
@@ -85,9 +83,6 @@ If you find STFANet, or FAC layer useful in your research, please consider citin
 We are glad to hear if you have any suggestions and questions.
 
 Please send email to shangchenzhou@gmail.com
-
-## Reference
-[...]
 
 ## License
 
