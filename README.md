@@ -64,7 +64,7 @@ python runner.py
 
 ## Results on the testing dataset and real blurry videos
 
-Some results are shown in [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)
+Some results are shown in [[Project Page]](https://www.shangchenzhou.com/projects/stfan/).
 
 ## Citation
 If you find STFANet, or FAC layer useful in your research, please consider citing:
