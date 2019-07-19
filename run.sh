@@ -1,0 +1,1 @@
+srun -p Pixel --gres=gpu:1  --job-name=STFANet python -u /mnt/lustre/zhoushangchen/STFANet/runner.py

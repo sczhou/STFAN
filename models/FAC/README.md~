@@ -1,0 +1,18 @@
+# Kernel Prediction Network
+
+### Usage
+1. Go to ``./weights``, run ``download.sh`` to get the pre-trained weights.    
+2. Run ``install.sh`` to compile the separable convolution layer.   
+3. Run ``run.sh`` to start training (default on KITTI 2015 dataset)    
+4. Remember to set ``--only_test 1`` in ``run.sh`` when testing    
+
+   
+### Dependency
+Pytorch 0.3.1 (my setting) or higher is recommended, there is potential compatibility problem in Pytorch 0.1.2. Also, torchvision 0.2.0 (my setting, pip install torchvision=0.2.0) or higher is recommended.    
+
+### Notes
+This code is a legacy version of KPN, it might be efficiency issue when using mutiple GPUs. 
+
+
+
+
