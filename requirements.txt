@@ -4,7 +4,8 @@ json
 numpy
 matplotlib
 scipy
+torch==0.4.1.post2
+torchvision
 opencv-python
 pprint
-torchvision
 tensorboardX

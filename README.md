@@ -16,7 +16,7 @@ You could download the pretrained model (21.5MB) of STFANet from [[Here]](https:
 
 - Linux (tested on Ubuntu 14.04/16.04)
 - Python 2.7+
-- Pytorch 0.4.1
+- Pytorch 0.4.1.post2
 - easydict
 - tensorboardX
 
