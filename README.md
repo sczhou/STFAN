@@ -1,4 +1,4 @@
-# STFANet
+# STFAN
 
 Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblurring".&nbsp; [[arXiv]](https://arxiv.org/pdf/1904.05065.pdf) &nbsp; [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)&nbsp;
 
@@ -10,7 +10,7 @@ Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblu
 
 ## Pretrained Models
 
-You could download the pretrained model (21.5MB) of STFANet from [[Here]](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
+You could download the pretrained model (21.5MB) of STFAN from [[Here]](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
 
 ## Prerequisites
 
