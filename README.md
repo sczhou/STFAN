@@ -19,7 +19,7 @@ You could download the pretrained model (21.5MB) of STFAN from [[Here]](https://
 - Linux (tested on Ubuntu 14.04/16.04)
 - gcc 4.9+
 - Python 2.7+
-- Pytorch 0.4.1.post2
+- Pytorch 0.4.1
 - easydict
 - tensorboardX
 
