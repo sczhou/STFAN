@@ -6,7 +6,38 @@ Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblu
   <img width=95% src="https://user-images.githubusercontent.com/14334509/61511077-1b016200-aa28-11e9-94c1-63e97f55f093.png">
 </p>
 
+## Filter Adaptive Convolutional (FAC) Layer
 
+The proposed filter adaptive convolutional (FAC) layer applies generated pixel variant filters to the features, In theory, the element-wise adaptive filters is five-dimensional ![](http://latex.codecogs.com/svg.latex?$h{\times}w{\times}c{\times}k{\times}k$)
+. In practice, the dimension of the generated filter ![](http://latex.codecogs.com/svg.latex?$\mathcal{F}$)
+ is ![](http://latex.codecogs.com/svg.latex?$h{\times}w{\times}ck^2$) and we reshape it into the five-dimensional filter. For each position ![](http://latex.codecogs.com/svg.latex?$(x,y,c_i)$) of input feature ![](http://latex.codecogs.com/svg.latex?$Q\in\mathds{R}^{h{\times}w{\times}c}$), a specific local filter ![](http://latex.codecogs.com/svg.latex?$\mathds{F}_{x,y,c_i}\in\mathcal{R}^{k{\times}k}$) (reshape from ![](http://latex.codecogs.com/svg.latex?$1{\times}1{\times}k^2$)) is applied to the region centered around ![](http://latex.codecogs.com/svg.latex?$Q_{x,y,c_i}$).
+ 
+<p align="center">
+  <img width=40% src="https://user-images.githubusercontent.com/14334509/68988034-36f90100-086c-11ea-9e57-93aca737d6d3.jpg">
+</p>
+ 
+<p>&#10148; The <strong>forward pass</strong> of the proposed Filter Adaptive Convolutional (FAC) Layer is as follows:</p>
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/14334509/68988093-1aa99400-086d-11ea-9a92-8cef3026b11a.png">
+</p>
+
+<p>&#10148; The <strong>backward pass</strong> can be presented as:</p>
+
+<p align="center">
+  <img width=65% src="https://user-images.githubusercontent.com/14334509/68988094-2006de80-086d-11ea-9be0-d9758be6380e.png">
+</p>
+
+<p align="center">
+  <img width=50% src="https://user-images.githubusercontent.com/14334509/68988097-22693880-086d-11ea-983e-c561b7421d26.png">
+</p>
+ 
+ ## Illustration of Alignment and Deblurring Processes by FAC layer
+The frame alignment and deblurring are both spatially variant tasks. Using the proposed FAC layer, we consider these two processes as two filter adaptive convolution in feature domain. The convolution operation can transform the pixels of features, which can be used for frames alignment (a) and deblurring (b) using estimated corresponding filters.
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/14334509/68987844-01064d80-0869-11ea-8f80-2ebb72619f39.jpg">
+</p>
 
 ## Pretrained Models
 
