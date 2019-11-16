@@ -12,6 +12,8 @@ Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblu
 
 You could download the pretrained model (21.5MB) of STFAN from [[Here]](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
 
+(Note that the model does not need to unzip, just load it directly.)
+
 ## Prerequisites
 
 - Linux (tested on Ubuntu 14.04/16.04)
