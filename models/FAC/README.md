@@ -7,7 +7,6 @@ FAC layer applies generated spatially variant filters (element-wise) to the feat
 - gcc 4.9+
 - Pytorch 0.4.1
 
-(make: https://zhuanlan.zhihu.com/p/33026927 | install: sudo apt-get install gcc-4.9 g++4.9)
 
 ## Install
 ```
