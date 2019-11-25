@@ -1,6 +1,6 @@
 # STFAN
 
-Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblurring".&nbsp; [[arXiv]](https://arxiv.org/pdf/1904.12257.pdf) &nbsp; [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)&nbsp;
+Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblurring".&nbsp; [[Paper]](http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhou_Spatio-Temporal_Filter_Adaptive_Network_for_Video_Deblurring_ICCV_2019_paper.pdf) &nbsp; [[Project Page]](https://www.shangchenzhou.com/projects/stfan/)&nbsp;
 
 <p align="center">
   <img width=95% src="https://user-images.githubusercontent.com/14334509/61511077-1b016200-aa28-11e9-94c1-63e97f55f093.png">
@@ -105,10 +105,10 @@ Some results are shown in [[Project Page]](https://www.shangchenzhou.com/project
 If you find STFANet, or FAC layer useful in your research, please consider citing:
 
 ```
-@article{Zhou2019stfan,
+@inproceedings{zhou2019stfan,
   title={Spatio-Temporal Filter Adaptive Network for Video Deblurring},
-  author={Zhou, Shangchen and Zhang, Jiawei and Pan, Jinshan and Xie, Haozhe and Zuo, Wangmeng and Ren, Jimmy},
-  journal={arXiv preprint arXiv:1904.12257},
+  author={Zhou, Shangchen and Zhang, Jiawei and Pan, Jinshan and Xie, Haozhe and  Zuo, Wangmeng and Ren, Jimmy},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
   year={2019}
 }
 ```
