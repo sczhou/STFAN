@@ -7,63 +7,6 @@ from models.FAC.kernelconv2d import KernelConv2D
 
 from torch import nn
 
-# # model size
-# class DeblurNet(nn.Module):
-#     def __init__(self):
-#         super(DeblurNet, self).__init__()
-#         # OVD size
-#         self.conv1 = conv(5*3, 64, kernel_size=5, stride=1)
-#         self.conv2 = conv(64, 32, kernel_size=3, stride=2)
-#         self.conv3 = resnet_block(64, kernel_size=3)
-#         self.conv4 = resnet_block(64, kernel_size=3)
-#         self.conv5 = resnet_block(64, kernel_size=3)
-#         self.conv6 = resnet_block(64, kernel_size=3)
-#
-#         self.conv7 = conv(128, 64, kernel_size=5, stride=1)
-#
-#         self.conv8 = resnet_block(64, kernel_size=3)
-#         self.conv9 = resnet_block(64, kernel_size=3)
-#         self.conv10 = resnet_block(64, kernel_size=3)
-#         self.conv11 = resnet_block(64, kernel_size=3)
-#         self.conv12 = upconv(64, 64)
-#         self.conv13 = conv(64, 3,kernel_size=3)
-#
-#         self.conv14 = conv(64, 32,kernel_size=3)
-#
-#         # su size
-#         # self.conv1 = conv(15,64,kernel_size=5)
-#         #
-#         # self.conv2 = conv(64,64,kernel_size=3)
-#         # self.conv3 = conv(64,128,kernel_size=3)
-#         # self.conv4 = conv(128,128,kernel_size=3)
-#         #
-#         # self.conv5 = conv(128,256,kernel_size=3)
-#         # self.conv6 = conv(256,256,kernel_size=3)
-#         # self.conv7 = conv(256,256,kernel_size=3)
-#         # self.conv8 = conv(256,256,kernel_size=3)
-#         #
-#         # self.conv9 = conv(256,512,kernel_size=3)
-#         # self.conv10 = conv(512,512,kernel_size=3)
-#         # self.conv11 = conv(512,512,kernel_size=3)
-#         # self.conv12 = conv(512,512,kernel_size=3)
-#         #
-#         # self.conv13 = upconv(768,256)
-#         # self.conv14 = conv(256,256,kernel_size=3)
-#         # self.conv15 = conv(256,256,kernel_size=3)
-#         # self.conv16 = conv(256,256,kernel_size=3)
-#         #
-#         # self.conv17 = upconv(384,128)
-#         # self.conv18 = conv(128,128,kernel_size=3)
-#         # self.conv19 = conv(128,64,kernel_size=3)
-#         #
-#         # self.conv20 = upconv(128, 64)
-#         # self.conv21 = conv(64, 15, kernel_size=3)
-#         # self.conv22 = conv(15, 3, kernel_size=3)
-#
-#     def forward(self, img_blur, output_last_img_clear):
-#         pass
-#         return 1
-
 class DeblurNet(nn.Module):
     def __init__(self):
         super(DeblurNet, self).__init__()
