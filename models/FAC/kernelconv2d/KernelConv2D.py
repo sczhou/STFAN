@@ -75,7 +75,6 @@ class KernelConv2D(nn.Module):
         assert(kernel_size%2 == 1)
         self.kernel_size = kernel_size
         self.pad = torch.nn.ReplicationPad2d([(kernel_size-1)//2, (kernel_size-1)//2, (kernel_size-1)//2, (kernel_size-1)//2])
-        self.fac = KernelConv2DFunction(self.kernel_size)
     def forward(self, input, kernel):
         input_pad = self.pad(input)
         return KernelConv2DFunction(self.kernel_size)(input_pad, kernel)
