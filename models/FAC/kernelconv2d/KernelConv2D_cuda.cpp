@@ -8,7 +8,7 @@
 int KernelConv2D_forward_cuda(
 	at::Tensor& input,
 	at::Tensor& kernel,
-    int kernel_size,
+	int kernel_size,
 	at::Tensor& output
 ) {
     int success = KernelConv2D_forward_cuda_kernel(
@@ -17,6 +17,7 @@ int KernelConv2D_forward_cuda(
         kernel_size,
         output,
         at::cuda::getCurrentCUDAStream()
+	//at::globalContext().getCurrentCUDAStream() //for torch 0.4.1
     );
     if (!success) {
     	AT_ERROR("CUDA call failed");
@@ -27,7 +28,7 @@ int KernelConv2D_forward_cuda(
 int KernelConv2D_backward_cuda(
 	at::Tensor& input,
 	at::Tensor& kernel,
-    int kernel_size,
+	int kernel_size,
 	at::Tensor& grad_output,
 	at::Tensor& grad_input,
 	at::Tensor& grad_kernel
@@ -41,6 +42,7 @@ int KernelConv2D_backward_cuda(
         grad_input,
         grad_kernel,
         at::cuda::getCurrentCUDAStream()
+	//at::globalContext().getCurrentCUDAStream() //for torch 0.4.1
     );
     if (!success) {
     	AT_ERROR("CUDA call failed");
