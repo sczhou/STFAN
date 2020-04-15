@@ -51,7 +51,7 @@ You could download the pretrained model (21.5MB) of STFAN from [[Here]](https://
 - CUDA 8.0/9.0
 - gcc 4.9+
 - Python 2.7+
-- Pytorch 0.4.1
+- PyTorch 1.0+
 - easydict
 - tensorboardX
 

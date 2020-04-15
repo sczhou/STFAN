@@ -4,7 +4,7 @@ json
 numpy
 matplotlib
 scipy
-torch==0.4.1.post2
+torch>=1.0.0
 torchvision
 opencv-python
 pprint

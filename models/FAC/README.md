@@ -6,7 +6,7 @@ FAC layer applies generated spatially variant filters (element-wise) to the feat
 ## Prerequisites
 - CUDA 8.0/9.0
 - gcc 4.9+
-- Pytorch 0.4.1
+- Pytorch 1.0+
 
 
 ## Install
