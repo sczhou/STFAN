@@ -14,6 +14,7 @@ nvcc_args = [
 ]
 
 setup(
+    version='1.0.0',
     name='kernelconv2d_cuda',
     ext_modules=[
         CUDAExtension('kernelconv2d_cuda', [
