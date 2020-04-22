@@ -41,7 +41,7 @@ The frame alignment and deblurring are both spatially variant tasks. Using the p
 
 ## Pretrained Models
 
-You could download the pretrained model (21.5MB) of STFAN from [[Here]](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
+You could download the pretrained model (21.5MB) of STFAN from [here](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
 
 (Note that the model does not need to unzip, just load it directly.)
 
@@ -63,6 +63,18 @@ bash install.sh
 ```
 
 ## Get Started
+
+Download [DeepVideoDeblurring dataset](https://github.com/shuochsu/DeepVideoDeblurring) from this [link](http://www.cs.ubc.ca/labs/imager/tr/2017/DeepVideoDeblurring/DeepVideoDeblurring_Dataset.zip), and modify the data index tree as following:
+
+```
+├── [DATASET_ROOT]
+│   ├── train
+│   │   ├── input
+│   │   ├── GT
+│   ├── test
+│   │   ├── input
+│   │   ├── GT
+```
 
 Use the following command to train the neural network:
 
