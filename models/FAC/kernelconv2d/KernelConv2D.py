@@ -55,7 +55,7 @@ class KernelConv2DFunction(Function):
             elif grad_output.is_cuda == False:
                 raise NotImplementedError()  # CPU VERSION NOT IMPLEMENTED
 
-        return grad_input, grad_kernel
+        return grad_input, grad_kernel, None
 
 
 def gradient_check():
