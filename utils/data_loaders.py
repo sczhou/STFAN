@@ -106,7 +106,7 @@ class VideoDeblurDataLoader:
 
                 print('[INFO] %s Collecting files of Taxonomy [Name = %s]' % (dt.now(), name + ': ' + str(seq_num)))
 
-        print('[INFO] %s Complete collecting files of the dataset for %s. Seq Numbur: %d.\n' % (dt.now(), dataset_type.name, len(sequences)))
+        print('[INFO] %s Complete collecting files of the dataset for %s. Seq Number: %d.\n' % (dt.now(), dataset_type.name, len(sequences)))
         return VideoDeblurDataset(sequences, transforms)
 
     def get_files_of_taxonomy(self, phase, name, samples):
