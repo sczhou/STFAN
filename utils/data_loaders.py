@@ -42,6 +42,7 @@ class VideoDeblurDataset(torch.utils.data.dataset.Dataset):
     def get_datum(self, idx):
 
         name = self.file_list[idx]['name']
+        phase = self.file_list[idx]['phase']
         length = self.file_list[idx]['length']
         seq_blur_paths = self.file_list[idx]['seq_blur']
         seq_clear_paths = self.file_list[idx]['seq_clear']
@@ -52,7 +53,12 @@ class VideoDeblurDataset(torch.utils.data.dataset.Dataset):
             img_clear = readgen(seq_clear_paths[i]).astype(np.float32)
             seq_blur.append(img_blur)
             seq_clear.append(img_clear)
-
+        
+        if phase == 'train' and random.random() < 0.5:
+            # random reverse
+            seq_blur.reverse()
+            seq_clear.reverse()
+       
         return name, seq_blur, seq_clear
 # //////////////////////////////// = End of VideoDeblurDataset Class Definition = ///////////////////////////////// #
 
@@ -124,12 +130,9 @@ class VideoDeblurDataLoader:
                 seq_clear_paths.append(img_clear_path)
 
         if not seq_blur_paths == [] and not seq_clear_paths == []:
-            if phase == 'train' and random.random() < 0.5:
-                # reverse
-                seq_blur_paths.reverse()
-                seq_clear_paths.reverse()
             sequence.append({
                 'name': name,
+                'phase': phase,
                 'length': n_samples,
                 'seq_blur': seq_blur_paths,
                 'seq_clear': seq_clear_paths,
