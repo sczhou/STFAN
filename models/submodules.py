@@ -35,6 +35,27 @@ class ResnetBlock(nn.Module):
         out = self.stem(x) + x
         return out
 
+def kernel2d_conv(feat_in, kernel, ksize):
+    """
+    If you have some problems in installing the CUDA FAC layer, 
+    you can consider replacing it with this Python implementation.
+    Thanks @Shupeng Wang for his implementation.
+    """
+    channels = feat_in.size(1)
+    N, kernels, H, W = kernel.size()
+    pad = (ksize - 1) // 2
+
+    feat_in = F.pad(feat_in, (pad, pad, pad, pad), mode="replicate")
+    feat_in = feat_in.unfold(2, ksize, 1).unfold(3, ksize, 1)
+    feat_in = feat_in.permute(0, 2, 3, 1, 5, 4).contiguous()
+    feat_in = feat_in.reshape(N, H, W, channels, -1)
+
+    kernel = kernel.permute(0, 2, 3, 1).reshape(N, H, W, channels, ksize, ksize)
+    kernel = kernel.permute(0, 1, 2, 3, 5, 4).reshape(N, H, W, channels, -1)
+    feat_out = torch.sum(feat_in * kernel, -1)
+    feat_out = feat_out.permute(0, 3, 1, 2).contiguous()
+    return feat_out
+
 def init_upconv_bilinear(weight):
     f_shape = weight.size()
     heigh, width = f_shape[-2], f_shape[-1]
