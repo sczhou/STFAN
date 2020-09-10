@@ -39,7 +39,7 @@ def kernel2d_conv(feat_in, kernel, ksize):
     """
     If you have some problems in installing the CUDA FAC layer, 
     you can consider replacing it with this Python implementation.
-    Thanks @Shupeng Wang for his implementation.
+    Thanks @AIWalker-Happy for his implementation.
     """
     channels = feat_in.size(1)
     N, kernels, H, W = kernel.size()
