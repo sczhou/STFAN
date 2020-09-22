@@ -41,7 +41,7 @@ The frame alignment and deblurring are both spatially variant tasks. Using the p
 
 ## Pretrained Models
 
-You could download the pretrained model (21.5MB) of STFAN from [here](https://hiteducn0-my.sharepoint.com/:f:/g/personal/sczhou_hit_edu_cn/EiVeE2qh_e5Omxa_JrfOj6UBXgSm13kyI3RHwUPnaDL9Hg?e=5YJFOx). 
+You could download the pretrained model (21.5MB) of STFAN from [here](https://drive.google.com/file/d/1GBZicB_w5vRD27XOvDh3n6B4_0lr234d/view?usp=sharing). 
 
 (Note that the model does not need to unzip, just load it directly.)
 
