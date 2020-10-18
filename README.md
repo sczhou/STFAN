@@ -10,7 +10,7 @@ Code repo for the paper "Spatio-Temporal Filter Adaptive Network for Video Deblu
 
 The proposed filter adaptive convolutional (FAC) layer applies generated pixel variant filters to the features, In theory, the element-wise adaptive filters is five-dimensional ![](http://latex.codecogs.com/svg.latex?h{\times}w{\times}c{\times}k{\times}k)
 . In practice, the dimension of the generated filter ![](http://latex.codecogs.com/svg.latex?\mathcal{F})
- is ![](http://latex.codecogs.com/svg.latex?h{\times}w{\times}ck^2) and we reshape it into the five-dimensional filter. For each position ![](http://latex.codecogs.com/svg.latex?(x,y,c_i)) of input feature ![](http://latex.codecogs.com/svg.latex?Q\in\mathds{R}^{h{\times}w{\times}c}), a specific local filter ![](http://latex.codecogs.com/svg.latex?\mathds{F}_{x,y,c_i}\in\mathcal{R}^{k{\times}k}) (reshape from ![](http://latex.codecogs.com/svg.latex?1{\times}1{\times}k^2)) is applied to the region centered around ![](http://latex.codecogs.com/svg.latex?Q_{x,y,c_i}).
+ is ![](http://latex.codecogs.com/svg.latex?h{\times}w{\times}ck^2) and we reshape it into the five-dimensional filter. For each position ![](http://latex.codecogs.com/svg.latex?(x,y,c_i)) of input feature![](http://latex.codecogs.com/svg.latex?Q\in\mathds{R}^{h{\times}w{\times}c}), a specific local filter ![](http://latex.codecogs.com/svg.latex?\mathds{F}_{x,y,c_i}\in\mathcal{R}^{k{\times}k}) (reshape from ![](http://latex.codecogs.com/svg.latex?1{\times}1{\times}k^2)) is applied to the region centered around ![](http://latex.codecogs.com/svg.latex?Q_{x,y,c_i}).
  
 <p align="center">
   <img width=40% src="https://user-images.githubusercontent.com/14334509/68988034-36f90100-086c-11ea-9e57-93aca737d6d3.jpg">
