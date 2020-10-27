@@ -54,6 +54,11 @@ You could download the pretrained model (21.5MB) of STFAN from [here](https://dr
 - PyTorch 1.0+
 - easydict
 - tensorboardX
+Note that if your CUDA is 10.2+, you need to modify KernelConv2D_cuda.cpp:
+```
+1. Uncomment: #include <c10/cuda/CUDAStream.h>
+2. Modify: at::cuda::getCurrentCUDAStream() -> c10::cuda::getCurrentCUDAStream()
+```
 
 #### Installation
 
