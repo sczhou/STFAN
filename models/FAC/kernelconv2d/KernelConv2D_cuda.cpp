@@ -1,6 +1,8 @@
 #include <torch/torch.h>
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
+//#include <c10/cuda/CUDAStream.h> //for CUDA 10.2+
+#include <stdio.h>
 
 #include "KernelConv2D_kernel.h"
 
@@ -18,6 +20,8 @@ int KernelConv2D_forward_cuda(
         output,
         at::cuda::getCurrentCUDAStream()
 	//at::globalContext().getCurrentCUDAStream() //for torch 0.4.1
+	//c10::cuda::getCurrentCUDAStream() //for CUDA 10.2+
+
     );
     if (!success) {
     	AT_ERROR("CUDA call failed");
@@ -43,6 +47,7 @@ int KernelConv2D_backward_cuda(
         grad_kernel,
         at::cuda::getCurrentCUDAStream()
 	//at::globalContext().getCurrentCUDAStream() //for torch 0.4.1
+	//c10::cuda::getCurrentCUDAStream() //for CUDA 10.2+
     );
     if (!success) {
     	AT_ERROR("CUDA call failed");
